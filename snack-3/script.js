@@ -3,16 +3,18 @@
 
 // creo lista nomi + lista cognomi
 var nomi = ["Marco", "Giulio", "Paola", "Anna", ];
-
 var cognomi = ["Bianchi", "Verdi", "Rossi", ];
+var invitati = [];
 
-// genero una lista di 3 falsi invitati
-
-var listaInvitati = [];
-
+// ciclo 3 volte
 for ( var i=0; i<3; i++) {
-    listaInvitati[i] = nomi[Math.floor(Math.random() * 2)] + " " + cognomi[Math.floor(Math.random() * 2)];
+    // genero un numero random per il nome e per il cognome
+    var indiceRandomNome = Math.floor(Math.random() * nomi.length);
+    var indiceRandomCognome = Math.floor(Math.random() * cognomi.length);
+    // aggiungo il nome alla lista
+    var nomeCompleto = nomi[indiceRandomNome] + " " + cognomi[indiceRandomCognome];
+    invitati.push(nomeCompleto);
 }
 
-alert ("la lista degli invitati è " + listaInvitati);
-
+// stampo la lista
+alert("la lista degli invitati è " + invitati);
