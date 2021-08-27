@@ -11,7 +11,7 @@ var cognomi = ["Bianchi", "Verdi", "Rossi", ];
 var listaInvitati = [];
 
 for ( var i=0; i<3; i++) {
-    listaInvitati[i] = nomi[Math.floor(Math.random() * 2)] + cognomi[Math.floor(Math.random() * 2)];
+    listaInvitati[i] = nomi[Math.floor(Math.random() * 2)] + " " + cognomi[Math.floor(Math.random() * 2)];
 }
 
 alert ("la lista degli invitati è " + listaInvitati);
